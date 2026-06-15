@@ -19,7 +19,7 @@ int main(void) {
         printf("%s", line);
         count ++;
     }
-    printf("全部で%d行", count);
+    printf("全部で%d行\n", count);
 
     fclose(fp);
     fp = NULL;
