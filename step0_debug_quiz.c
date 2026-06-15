@@ -8,13 +8,13 @@
 
 int main(void) {
     FILE *fp = fopen("color.csv", "r");
-
-    char line[256];
-    fgets(line, sizeof(line), fp);   
     if(fp == NULL){
         fprintf (stderr, "ファイルが開けません\n");
         return 1;
     }
+
+    char line[256];
+    fgets(line, sizeof(line), fp);   
     printf("%s", line);
 
     fp = NULL;
