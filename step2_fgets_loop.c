@@ -12,11 +12,14 @@ int main(void) {
     }
 
     char line[256];
+    int count;
 
     // fgets が NULL を返したらファイルの終わり
     while (fgets(line, sizeof(line), fp) != NULL) {
         printf("%s", line);
+        count ++;
     }
+    printf("全部で%d行", count);
 
     fclose(fp);
     fp = NULL;
