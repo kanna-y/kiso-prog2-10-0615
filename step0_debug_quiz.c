@@ -17,8 +17,8 @@ int main(void) {
     fgets(line, sizeof(line), fp);   
     printf("%s", line);
 
-    fp = NULL;
     fclose(fp);
+    fp = NULL;
 
     FILE *fp2 = fopen("log.txt", "w");
     if (fp2 == NULL) { return 1; }
@@ -27,11 +27,12 @@ int main(void) {
     fclose(fp2);
 
     FILE *fp3 = fopen("no_such_dir/out.csv", "w");
-    fprintf(fp3, "data\n");
     if (fp3 == NULL){
         fprintf (stderr, "ファイルが開けません\n");
         return 1;
     }
+    fprintf(fp3, "data\n");
+    
     
     fclose(fp3);
 
